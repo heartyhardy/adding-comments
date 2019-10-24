@@ -1,0 +1,44 @@
+.comment{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    background-color: lightgoldenrodyellow;
+    border: 1px solid lightgray;
+    box-shadow: .1rem .1rem 1rem lightgray;
+    padding: .25rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+/* This hides the content of the nth even emoji */
+.comment:nth-child(even) .emoji{
+    text-indent: -9999px;
+    line-height: 0;
+}
+/* This replaces the content of the nth even emoji */
+.comment:nth-child(even) .emoji::after{
+    content: '👩🏻';
+    text-indent: 0;
+    line-height: initial;
+    display: block;
+}
+
+.comment:nth-child(even){
+    background-color: lightblue;
+}
+
+.comment:hover{
+    background-color: lightsalmon;
+    border-color: salmon;
+}
+
+.comment_p{
+    font-size: small;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: darkslategray;
+}
+
+.emoji{
+    font-size: medium;
+    text-align: center;
+    padding: 0 .5rem 0 .5rem;
+}
