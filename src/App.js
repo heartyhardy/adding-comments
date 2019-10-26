@@ -11,7 +11,7 @@ const App = () => {
   const [currentComment, setCurrentComment] = useState("");
 
   const onAddComment = (event) => {
-    if(currentComment.comment.length > 0){
+    if(currentComment.comment){
       let allComments = [...comments , currentComment];
       setComments(allComments);
     }
