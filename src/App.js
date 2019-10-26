@@ -5,7 +5,7 @@ import Navbar from './components/navbar';
 import Comments from './components/comments';
 import CommentInput from './components/comment-input';
 
-const App = () => {
+const App = (props) => {
 
   const [comments, setComments] = useState([]);
   const [currentComment, setCurrentComment] = useState("");
@@ -30,6 +30,7 @@ const App = () => {
 
   return (
     <div className="App">
+      {/*<p>{props.title}</p>*/}
       <header className="App-header">
         <Navbar />
       </header>
